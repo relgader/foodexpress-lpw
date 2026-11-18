@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservas e Contato | FoodExpress</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="logo" href="index.html">Food<span>Express</span></a>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu">&#9776;</label>
+  <nav class="menu">
+    <a href="index.html">Cardápio</a>
+    <a href="horarios.html">Horários e Nutrição</a>
+    <a href="reserva.html">Reservas e Contato</a>
+  </nav>
+</header>
+<main class="conteudo">
+  <h1>Reserva de mesa e contato</h1>
+  <p>Preencha o formulário e entraremos em contato para confirmar.</p>
+
+  <form action="#" method="post" class="formulario">
+    <fieldset>
+      <legend>Seus dados</legend>
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" minlength="3" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(32) 99999-0000" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Reserva</legend>
+      <label for="assunto">Assunto</label>
+      <select id="assunto" name="assunto" required>
+        <option value="">Selecione</option>
+        <option value="reserva">Reservar mesa</option>
+        <option value="duvida">Dúvida</option>
+        <option value="sugestao">Sugestão ou reclamação</option>
+      </select>
+
+      <div class="linha">
+        <div><label for="data">Data</label><input type="date" id="data" name="data"></div>
+        <div><label for="hora">Horário</label><input type="time" id="hora" name="hora"></div>
+        <div><label for="pessoas">Pessoas</label><input type="number" id="pessoas" name="pessoas" min="1" max="12" value="2"></div>
+      </div>
+
+      <p class="grupo-titulo">Ambiente</p>
+      <label class="opcao"><input type="radio" name="ambiente" value="salao" checked> Salão</label>
+      <label class="opcao"><input type="radio" name="ambiente" value="varanda"> Varanda</label>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Alguma observação?"></textarea>
+
+      <label class="opcao"><input type="checkbox" name="aceite" required> Concordo em ser contatado para confirmar a reserva.</label>
+    </fieldset>
+
+    <button type="submit" class="botao">Enviar</button>
+  </form>
+</main>
+<footer class="rodape">
+  <p><strong>FoodExpress</strong> &middot; Rua das Palmeiras, 120 &middot; (32) 99999-0000</p>
+  <p>&copy; 2026 FoodExpress. Projeto acadêmico.</p>
+</footer>
+</body>
+</html>
